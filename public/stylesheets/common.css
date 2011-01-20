@@ -1,0 +1,122 @@
+.debug, .debug-red {border: 2px dotted red !important; }
+.debug-green {border: 2px dotted green !important; }
+.debug-blue {	border: 2px dotted blue !important; }
+.debug-orange {	border: 2px dotted orange !important; }
+.debug-yellow {	border: 2px dotted yellow !important; }
+
+.huge {
+	font-size: 1.6em;
+	line-height: 3.125em;
+	margin-bottom: 0.625em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.row {
+  clear: both;
+}
+
+.row input[type="checkbox"] {
+  top: -4px !important;
+}
+
+.row-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.padding-top-1 {
+  padding-top: 10px;
+}
+
+.padding-top-2 {
+  padding-top: 20px;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 10px;
+}
+
+.padding-bottom-2 {
+  padding-bottom: 20px;
+}
+
+.font-base, .font-normal {
+  font-size: 1em !important;
+  font-weight: normal !important;
+}
+
+.font-bigger {
+  font-size: 1.2em !important;
+}
+
+.font-smaller {  
+  font-size: 0.8em !important;
+}
+
+.font-even-smaller {  
+  font-size: 0.75em !important;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-not-bold {
+  font-weight: normal !important;
+}
+
+.required-star {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-corners {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+.warning {
+  background: transparent url(/images/error.png) no-repeat scroll 0 center;
+  padding-left: 24px;
+}

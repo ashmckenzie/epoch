@@ -1,0 +1,16 @@
+default: &default
+  site_email: epoch@the-rebellion.net
+  admin_email: ash@ashmckenzie.org
+  max_feeds: 3
+  ga_ua:
+
+development:
+  site_url: http://epoch.the-rebellion.net
+  site_name: Epoch
+  <<: *default
+
+production:
+  <<: *default
+  site_url: http://epoch.the-rebellion.net
+  site_name: Epoch
+  ga_ua: UA-9084580-2

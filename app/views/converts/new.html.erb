@@ -1,0 +1,42 @@
+<% title 'Epoch' %>
+
+<div id="convert-new" class="rounded-corners">
+
+  <div id="convert-new-inner">
+
+		<% semantic_form_for @convert do |f| %>
+
+		  <h2>Your timezone</h2>
+
+      <% f.inputs do %>
+        <%= f.input :timezone, :label => false, :collection => grouped_options_for_select(Convert::TIME_ZONES, cookies[:timezone]) %>
+      <% end %>
+
+			<h2>Date/time to convert</h2>
+
+			<% f.inputs do %> 
+				<%= f.input :datetime, :label => false, :hint => 'Date/time in ' + link_to('chronic', 'http://chronic.rubyforge.org/') + ' format' %>
+			<% end %>
+
+			<% if @datetime %>
+				<div id="response">
+					<p><%= @datetime.strftime('%d/%m/%Y %I:%M:%S %p') %></p>
+					<br/>
+				</div>
+			<% end %>
+			
+			<%= f.submit 'CONVERT' %>
+
+			<br/><br/>
+
+			<p><%= link_to 'Cancel', root_path %></p>
+
+    <% end %>
+
+  </div>
+
+</div>
+
+<% content_for :script do %>
+  $('#epoch').attr('autocomplete', 'off').focus();
+<% end %>

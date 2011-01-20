@@ -1,0 +1,87 @@
+body {
+  background: #000000 url(/images/moon.jpg) no-repeat scroll center top !important;
+  color: #fff !important;
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+  color: #EEE !important;
+}
+
+#content {
+  margin: 0 auto;
+  width: 420px;
+}
+
+#convert-new, #convert-create {
+  background-color: #000;
+  border: 10px solid #555;
+  opacity: 0.7;
+  position: absolute;
+  text-align: center;
+  top: 28%;
+}
+
+#convert-new {
+  width: 420px;
+}
+
+#convert-create {
+  width: 440px;
+}
+
+#convert-create h2 {
+  font-size: 2.5em;
+}
+
+#convert-new-inner, #convert-create-inner {
+  padding: 20px;
+}
+
+#convert-new-inner #epoch {
+  border: 1px dotted #bbb;
+  font-size: 25px;
+  padding: 10px;
+  width: 160px;
+}
+
+#convert-new-inner input[type="submit"] {
+  font-size: 18px;
+}
+
+#convert-new-inner select,
+#convert-new-inner input[type="text"] {
+  border: 1px dotted #bbb;
+  font-size: 16px;
+  padding: 4px;
+}
+
+#errorExplanation h2 {
+  font-size: 1.5em;
+}
+
+p.inline-hints,
+p.inline-errors {
+	margin-top: 6px !important;
+}
+
+form.formtastic fieldset > ol > li p.inline-errors,
+form.formtastic fieldset > ol > li p.inline-hints {
+  margin: 0;
+}
+
+form.formtastic .error, form.formtastic .notice, form.formtastic .success {
+  border: none;
+  background-color: inherit;
+}
+
+#response p {
+	color: #4EE07A !important;
+	font-size: 1.6em;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+form.formtastic fieldset > ol > li p.inline-errors {
+	color: #D33737;
+	font-weight: bold;
+}

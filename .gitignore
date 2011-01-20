@@ -1,0 +1,14 @@
+coverage
+coverage.data
+profiling
+log/*.log
+tmp/**/*
+*.swp
+.DS_Store
+doc/api
+doc/app
+coverage
+db/*.sqlite3
+db/data.yml*
+public/.htaccess
+db/*_structure.sql
