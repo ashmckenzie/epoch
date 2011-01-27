@@ -39,7 +39,7 @@ class Convert < Tableless
   end
 
 	def validate
-		errors.add :datetime, "Chronic could not understand you sorry." unless self.chronic_date
+		errors.add :datetime, "Chronic could not understand you sorry." if ! self.chronic_date && ! self.datetime.empty?
 	end
   
 end
