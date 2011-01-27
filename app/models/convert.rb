@@ -10,10 +10,32 @@ class Convert < Tableless
   validates_presence_of :datetime, :message => 'Date/time field cannot be blank'
 
   def chronic_date
+
+		datetime = self.datetime.dup
+
 		begin
-			Chronic.parse(self.datetime, { :now => TZInfo::Timezone.get(self.timezone).now })
+
+			as_epoch = false
+
+			if self.datetime.gsub!(/ as epoch/, '')
+				as_epoch = true
+			end
+
+			t = Chronic.parse(self.datetime, { :now => TZInfo::Timezone.get(self.timezone).now })
+
+			if as_epoch
+				t = t.to_i
+			else
+				t = t.strftime('%d/%m/%Y %I:%M:%S %p')
+			end
+
 		rescue Exception
 		end
+
+		self.datetime = datetime
+
+		return t
+
   end
 
 	def validate
