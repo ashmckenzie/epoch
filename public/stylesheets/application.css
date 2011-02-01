@@ -18,7 +18,7 @@ a, h1, h2, h3, h4, h5, h6 {
   opacity: 0.7;
   position: absolute;
   text-align: center;
-  top: 28%;
+  top: 20%;
 }
 
 #convert-new {
@@ -84,4 +84,9 @@ form.formtastic .error, form.formtastic .notice, form.formtastic .success {
 form.formtastic fieldset > ol > li p.inline-errors {
 	color: #D33737;
 	font-weight: bold;
+}
+
+form.formtastic input[type="text"] {
+	font-family: monospace;
+	text-align: center;
 }
