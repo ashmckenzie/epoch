@@ -15,7 +15,6 @@ a, h1, h2, h3, h4, h5, h6 {
 #convert-new, #convert-create {
   background-color: #000;
   border: 10px solid #555;
-  opacity: 0.7;
   position: absolute;
   text-align: center;
   top: 20%;
@@ -61,6 +60,7 @@ a, h1, h2, h3, h4, h5, h6 {
 
 p.inline-hints,
 p.inline-errors {
+	letter-spacing: 0.3px;
 	margin-top: 6px !important;
 }
 
@@ -89,4 +89,8 @@ form.formtastic fieldset > ol > li p.inline-errors {
 form.formtastic input[type="text"] {
 	font-family: monospace;
 	text-align: center;
+}
+
+form.formtastic #convert_submit {
+	padding: 2px;
 }

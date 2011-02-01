@@ -9,18 +9,13 @@ class ConvertsController < ApplicationController
   end
 
   def create
-
 		cookies[:timezone] = params[:convert][:timezone].clone
+		params[:convert][:timezone].gsub!(/:.+$/, '')
 
-		if params[:convert] and params[:convert][:timezone].gsub!(/:.+$/, '')
-
-			@convert = Convert.new(params[:convert])
-			@datetime = @convert.save
-
-		end
+		@convert = Convert.create(params[:convert])
+		@datetime = @convert.save
 
 		render :action => "new"
-
   end
 
 end
