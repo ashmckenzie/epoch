@@ -1,0 +1,17 @@
+h1. Epoch - Date conversion leveraging Chronic
+
+Quite often I find I need to convert to an from epoch and sadly don't have Ruby / IRB installed.  This simple Rails 2 app leverages the awesome "chronic":https://github.com/mojombo/chronic/ gem to do the heavy lifting.
+
+Hope it proves useful to someone out there :)
+
+h2. Gems used
+
+* "chronic":https://github.com/mojombo/chronic
+* "formtastic":https://github.com/justinfrench/formtastic
+* "capybara":https://github.com/jnicklas/capybara
+* "rcov":https://github.com/relevance/rcov
+* "shoulda":https://github.com/thoughtbot/shoulda
+
+h2. Code coverage
+
+According to "rcov":https://github.com/relevance/rcov, 100% of the code is covered using "capybara":https://github.com/jnicklas/capybara to handle just the integration testing.
