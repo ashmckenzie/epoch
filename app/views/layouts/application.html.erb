@@ -20,7 +20,7 @@
     <% javascript_tag :defer => 'defer' do %>
       $(document).ready(function() {
 				<%= yield :script %>
-        <%= ga_generate_js(APP_CONFIG['ga_ua']) %>
+        <%# ga_generate_js(APP_CONFIG['ga_ua']) %>
       });
     <% end %>
   </body>

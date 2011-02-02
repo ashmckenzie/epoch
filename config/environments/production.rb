@@ -26,3 +26,5 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+#ExceptionNotifier.exception_recipients = %w(ash@greenworm.com.au)

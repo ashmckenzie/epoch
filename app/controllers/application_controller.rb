@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
-	include ExceptionNotification::Notifiable
+	#include ExceptionNotification::Notifiable
 
 end

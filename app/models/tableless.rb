@@ -1,4 +1,5 @@
 class Tableless < ActiveRecord::Base
+
   def self.columns
     @columns ||= [];
   end
@@ -12,4 +13,5 @@ class Tableless < ActiveRecord::Base
   def save(validate = true)
     validate ? valid? : true
   end
+
 end
