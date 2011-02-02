@@ -4,7 +4,7 @@
 
   <div id="convert-new-inner">
 
-		<% semantic_form_for @convert do |f| %>
+		<% semantic_form_for @convert, :url => '/' do |f| %>
 
 		  <h2>Timezone</h2>
 
@@ -15,7 +15,7 @@
 			<h2>Date/time format</h2>
 
 			<% f.inputs do %> 
-				<%= f.input :datetime_format, :label => false, :hint => 'Uses ' + link_to('Time#strftime', 'http://www.ruby-doc.org/core/classes/Time.html#M000392', :target => '_blank') + '&nbsp;&nbsp;--&nbsp;&nbsp; Want' + link_to('default format', '#', :id => 'default_format') + ' ?' %>
+				<%= f.input :datetime_format, :label => false, :hint => 'Uses ' + link_to('Time#strftime', 'http://www.ruby-doc.org/core/classes/Time.html#M000392', :target => '_blank') + '&nbsp;&nbsp;--&nbsp;&nbsp; Want ' + link_to('default format', '#', :id => 'default_format') + ' ?' %>
 			<% end %>
 
 			<h2>Date/time to convert</h2>
@@ -30,12 +30,11 @@
 					<br/>
 				</div>
 			<% end %>
-			
-			<%= f.submit 'CONVERT' %>
+		
+			<p><%= f.submit 'CONVERT' %>&nbsp;&nbsp;or&nbsp;&nbsp;<%= link_to 'Cancel', root_path %></p>
 
-			<br/><br/>
-
-			<p><%= link_to 'Cancel', root_path %></p>
+      <br/>
+			<p>Code available on <%= link_to 'GitHub', 'http://github.com/asha79/epoch', :target => '_blank' %></p>
 
     <% end %>
 

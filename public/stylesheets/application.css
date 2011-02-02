@@ -19,9 +19,10 @@ h2 {
 #convert-new, #convert-create {
   background-color: #000;
   border: 10px solid #555;
+  margin-top: -210px;  
   position: absolute;
   text-align: center;
-  top: 20%;
+  top: 50%;
 }
 
 #convert-new {
@@ -65,7 +66,7 @@ h2 {
 p.inline-hints,
 p.inline-errors {
 	letter-spacing: 0.3px;
-	margin-top: 6px !important;
+	margin-top: 8px !important;
 }
 
 form.formtastic fieldset > ol > li p.inline-errors,
@@ -76,6 +77,14 @@ form.formtastic fieldset > ol > li p.inline-hints {
 form.formtastic .error, form.formtastic .notice, form.formtastic .success {
   border: none;
   background-color: inherit;
+}
+
+form.formtastic p {
+  color: #666;
+}
+
+form.formtastic a {
+  color: #999 !important;
 }
 
 #response p {
@@ -92,6 +101,7 @@ form.formtastic fieldset > ol > li p.inline-errors {
 
 form.formtastic input[type="text"] {
 	font-family: monospace;
+  width: 230px !important;
 	text-align: center;
 }
 

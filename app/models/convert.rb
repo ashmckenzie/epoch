@@ -27,7 +27,7 @@ class Convert < Tableless
 
 			return t.strftime(self.datetime_format)
 
-		rescue Exception => e
+		rescue
 			errors.add :datetime, "Chronic did not understand you, sorry."
 			return false
 		end
