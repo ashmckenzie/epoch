@@ -6,6 +6,7 @@ class ConversionsTest < ActionController::IntegrationTest
 		visit '/'
 		select "", :from => 'convert_timezone'
 		fill_in 'convert_datetime_format', :with => ""
+		fill_in 'convert_datetime', :with => ""
 		click_button 'CONVERT'
 		assert page.has_content? 'Date/time format field should not be blank'
 		assert page.has_content? 'Timezone cannot be blank'
