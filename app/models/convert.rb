@@ -22,7 +22,8 @@ class Convert < Tableless
 			if self.datetime.match(/\d{10,}/)
 				t = Time.at(self.datetime.to_i)
 			else
-				t = Chronic.parse(self.datetime, { :now => TZInfo::Timezone.get(self.timezone).now })
+				Time.zone = self.timezone
+				t = Chronic.parse(self.datetime, { :now => Time.zone.now })
 			end
 
 			return t.strftime(self.datetime_format)
