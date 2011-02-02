@@ -7,3 +7,9 @@ Rails::Initializer.run do |config|
   config.gem "chronic"
   config.time_zone = 'UTC'
 end
+
+ExceptionNotification::Notifier.exception_recipients = %w(ash@greenworm.com.au)
+ExceptionNotification::Notifier.sender_address = %("Application Error" <noreply@the-rebellion.net>)
+ExceptionNotification::Notifier.email_prefix = "[Epoch] " 
+
+ActionMailer::Base.delivery_method = :sendmail

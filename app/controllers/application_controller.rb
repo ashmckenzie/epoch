@@ -3,11 +3,11 @@
 
 class ApplicationController < ActionController::Base
 
+	include ExceptionNotification::Notifiable
+
   helper :all # include all helpers, all the time
   protect_from_forgery
   filter_parameter_logging :password, :password_confirmation
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
-
-	#include ExceptionNotification::Notifiable
 
 end
