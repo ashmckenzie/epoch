@@ -29,3 +29,4 @@ config.action_mailer.delivery_method = :test
 
 config.gem "capybara"
 config.gem "launchy"
+config.gem "shoulda"

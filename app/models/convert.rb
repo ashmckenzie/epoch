@@ -17,7 +17,7 @@ class Convert < Tableless
 
 		begin
 
-			return false unless self.valid?
+			return false unless super
 
 			if self.datetime.match(/\d{10,}/)
 				t = Time.at(self.datetime.to_i)

@@ -1,9 +1,5 @@
 class ConvertsController < ApplicationController
 
-  def method_missing(url)
-    redirect_to :action => "new"
-  end
-
   def new
     @convert = Convert.new
   end

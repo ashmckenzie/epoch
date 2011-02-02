@@ -6,7 +6,7 @@
 
 		<% semantic_form_for @convert do |f| %>
 
-		  <h2>Your timezone</h2>
+		  <h2>Timezone</h2>
 
       <% f.inputs do %>
         <%= f.input :timezone, :label => false, :collection => grouped_options_for_select(Convert::TIME_ZONES, cookies[:timezone]) %>
@@ -15,13 +15,13 @@
 			<h2>Date/time format</h2>
 
 			<% f.inputs do %> 
-				<%= f.input :datetime_format, :label => false, :hint => 'Uses ' + link_to('Time#strftime', 'http://www.ruby-doc.org/core/classes/Time.html#M000392', :target => '_blank') + ' <> ' + link_to('Want default format', '#', :id => 'default_format') + ' ?' %>
+				<%= f.input :datetime_format, :label => false, :hint => 'Uses ' + link_to('Time#strftime', 'http://www.ruby-doc.org/core/classes/Time.html#M000392', :target => '_blank') + '&nbsp;&nbsp;--&nbsp;&nbsp; Want' + link_to('default format', '#', :id => 'default_format') + ' ?' %>
 			<% end %>
 
 			<h2>Date/time to convert</h2>
 
 			<% f.inputs do %> 
-				<%= f.input :datetime, :label => false, :hint => 'Date/time in ' + link_to('chronic', 'http://chronic.rubyforge.org/', :target => '_blank') + ' format' %>
+				<%= f.input :datetime, :label => false, :hint => 'Date/time is in ' + link_to('chronic', 'http://chronic.rubyforge.org/', :target => '_blank') + ' format' %>
 			<% end %>
 
 			<% if @datetime %>
